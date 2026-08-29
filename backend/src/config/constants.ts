@@ -1,0 +1,64 @@
+export const SUPPORTED_PAIRS = [
+  "EUR/USD",
+  "GBP/USD",
+  "USD/JPY",
+  "USD/CHF",
+  "AUD/USD",
+  "USD/CAD",
+  "NZD/USD",
+  "EUR/JPY",
+  "GBP/JPY",
+];
+
+export const SUPPORTED_TIMEFRAMES = ["1m", "5m", "15m", "30m", "1H", "4H", "1D"];
+
+export const TIMEFRAME_MILLISECONDS: { [key: string]: number } = {
+  "1m": 60 * 1000,
+  "5m": 5 * 60 * 1000,
+  "15m": 15 * 60 * 1000,
+  "30m": 30 * 60 * 1000,
+  "1H": 60 * 60 * 1000,
+  "4H": 4 * 60 * 60 * 1000,
+  "1D": 24 * 60 * 60 * 1000,
+};
+
+export const EVIDENCE_THRESHOLDS = {
+  BIAS_THRESHOLD: 15,
+  MIN_CONFIDENCE: 20,
+  MAX_CONFIDENCE: 90,
+  RSI_OVERBOUGHT: 70,
+  RSI_OVERSOLD: 30,
+  HIGH_VOLATILITY_MULTIPLIER: 1.5,
+  EXTREME_VOLATILITY_MULTIPLIER: 2,
+};
+
+export const TECHNICAL_PERIODS = {
+  RSI: 14,
+  MACD_FAST: 12,
+  MACD_SLOW: 26,
+  MACD_SIGNAL: 9,
+  ATR: 14,
+  EMA_FAST: 5,
+  EMA_MEDIUM: 10,
+  EMA_STANDARD: 20,
+  EMA_SLOW: 50,
+  SMA_SLOW: 50,
+  SMA_VERYSLOW: 200,
+  BOLLINGER_PERIOD: 20,
+  BOLLINGER_STDDEV: 2,
+};
+
+export const DEMO_MODE_ENABLED = process.env.USE_DEMO_DATA === "true";
+
+export const API_ENDPOINTS = {
+  ALPHA_VANTAGE: "https://www.alphavantage.co/query",
+};
+
+export const ERROR_CODES = {
+  INVALID_PAIR: "INVALID_PAIR",
+  INVALID_TIMEFRAME: "INVALID_TIMEFRAME",
+  API_ERROR: "API_ERROR",
+  DATABASE_ERROR: "DATABASE_ERROR",
+  INVALID_PREDICTION_ID: "INVALID_PREDICTION_ID",
+  INSUFFICIENT_DATA: "INSUFFICIENT_DATA",
+};
